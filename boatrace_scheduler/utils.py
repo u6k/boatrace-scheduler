@@ -1,4 +1,7 @@
 import logging.config
+import os
+
+import pika
 
 logging.config.dictConfig({
     'version': 1,
@@ -40,8 +43,14 @@ logging.config.dictConfig({
 })
 
 
-L = logging.getLogger(__name__)
-
-
-def hello():
-    L.debug("hello")
+def post_message(msg):
+    mq_conn = pika.BlockingConnection(pika.URLParameters(os.environ.get("MQ_URL")))
+    try:
+        mq_channel = mq_conn.channel()
+        mq_channel.basic_publish(
+            exchange="",
+            routing_key=os.environ.get("MQ_QUEUE"),
+            body=msg.encode("utf-8"),
+        )
+    finally:
+        mq_conn.close()
