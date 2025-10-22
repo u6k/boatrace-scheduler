@@ -6,7 +6,7 @@
 
 本システムは、データ収集、予測、投票というモジュールが稼働している。各モジュールの実行タイミングを本モジュールで制御する。
 
-## TODO: Table of Contents
+## Table of Contents
 
 - [Install](#install)
 - [Usage](#usage)
@@ -52,17 +52,19 @@ Server:
 
 `docker pull`でイメージを取得します。
 
-TODO: docker pullコマンド
+```
+$ docker pull ghcr.io/u6k/boatrace-scheduler:0.1.0-dev
+```
 
 ## Usage
 
 `docker run`でコンテナを実行します。
 
-TODO: docker runコマンド
+```
+$ docker run --rm --env-file=.env ghcr.io/u6k/boatrace-scheduler:0.1.0-dev
+```
 
-以下の環境変数で動作を制御します。
-
-TODO: 環境変数の説明
+環境変数で動作を制御します。詳細は`.env.original`を参照してください。
 
 ## Others
 
