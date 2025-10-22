@@ -9,5 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- [#10499: 前日・当日の全レースをクロールする](https://redmine.u6k.me/issues/10499)
 - [#10576: 簡易なスケジューラーを作成する](https://redmine.u6k.me/issues/10576)
+- [#10499: 前日・当日の全レースをクロールする](https://redmine.u6k.me/issues/10499)
+- [#10500: 出走時刻の30,20,15,10,5,2分前にクロールする](https://redmine.u6k.me/issues/10500)
