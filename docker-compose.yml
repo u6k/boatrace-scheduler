@@ -5,4 +5,5 @@ services:
       dockerfile: ./Dockerfile
     volumes:
       - .:/var/myapp
+      - ..\boatrace-scheduler-data:/var/data
     env_file: .env
