@@ -31,6 +31,7 @@ def add_crawl_race_jobs(scheduler):
                     post_crawl_at_race,
                     "date",
                     run_date=crawl_datetime,
+                    misfire_grace_time=None,
                     args=[crawl_datetime, race_url, target_date, before_minutes],
                 )
 
