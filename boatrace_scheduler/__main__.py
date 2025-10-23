@@ -19,6 +19,7 @@ if __name__ == "__main__":
     scheduler.add_job(
         jobs.post_crawl_at_today,
         "cron",
+        misfire_grace_time=None,
         **cron_crawl_at_today,
     )
 
@@ -29,6 +30,7 @@ if __name__ == "__main__":
     scheduler.add_job(
         jobs.post_crawl_at_yesterday,
         "cron",
+        misfire_grace_time=None,
         **cron_crawl_at_yesterday,
     )
 
@@ -39,6 +41,7 @@ if __name__ == "__main__":
     scheduler.add_job(
         jobs.add_crawl_race_jobs,
         "cron",
+        misfire_grace_time=None,
         args=[scheduler],
         **cron_add_crawl_at_race_jobs,
     )
