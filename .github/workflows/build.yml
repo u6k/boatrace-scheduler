@@ -3,7 +3,7 @@ on:
 
 env:
   IMAGE_NAME: boatrace-scheduler
-  IMAGE_VERSION: 1.0.0
+  IMAGE_VERSION: 1.0.1
 
 jobs:
   build:
@@ -17,9 +17,6 @@ jobs:
         run: cp .env.original .env
       - name: Lint
         run: docker compose run app poetry run poe lint
-      # TODO: 一時的にテストをスキップする
-      # - name: Smoke test
-      #   run: docker compose run app poetry run poe pipeline
       - name: Login to GitHub Container Repository
         uses: docker/login-action@v2
         with:

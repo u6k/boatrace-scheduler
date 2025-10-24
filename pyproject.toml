@@ -1,6 +1,6 @@
 [project]
 name = "boatrace-scheduler"
-version = "1.0.0"
+version = "1.0.1"
 description = "競艇自動投票システムをスケジュール制御する"
 authors = [
     {name = "u6k",email = "u6k.apps@gmail.com"}
